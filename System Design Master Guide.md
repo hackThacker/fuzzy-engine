@@ -4,6 +4,75 @@
 
 ---
 
+
+```mermaid
+graph TD
+
+subgraph Client_Layer
+A[Web / Mobile Client]
+end
+
+subgraph Edge_Layer
+B[DNS]
+C[CDN Cache]
+D[WAF Security]
+E[Reverse Proxy]
+end
+
+subgraph Traffic_Layer
+F[Load Balancer]
+G[API Gateway]
+H[Auth Service]
+end
+
+subgraph App_Layer
+I[User Service]
+J[Order Service]
+K[Payment Service]
+L[Search Service]
+M[Realtime WebSocket]
+end
+
+subgraph Data_Layer
+N[Cache Redis]
+O[SQL Database]
+P[NoSQL Database]
+Q[Object Storage]
+end
+
+subgraph Async_Layer
+R[Message Queue]
+end
+
+subgraph Observability
+S[Logs Monitoring Tracing]
+end
+
+A --> B --> C --> D --> E --> F --> G --> H
+
+H --> I
+H --> J
+H --> K
+H --> L
+H --> M
+
+I --> N
+J --> N
+K --> O
+L --> P
+
+N -->|Cache Hit| G
+N -->|Cache Miss| O
+
+J --> R
+K --> R
+R --> L
+
+I --> S
+J --> S
+K --> S
+```
+
 ## Table of Contents
 
 1. [Client-Server Architecture](#1-client-server-architecture)
@@ -3184,6 +3253,7 @@ graph TD
 8. Result: comment feed loads 5× faster with 80% less database CPU usage.
 
 ---
+
 
 ## Conclusion
 
