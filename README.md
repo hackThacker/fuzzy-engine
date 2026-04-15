@@ -25,8 +25,8 @@ A beginner-friendly and interview-focused open-source repository that explains s
 4. Clone your fork locally:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/<your-username>/fuzzy-engine.git
+cd fuzzy-engine
 ```
 
 5. Create a feature branch:
