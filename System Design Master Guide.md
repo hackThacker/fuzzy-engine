@@ -1089,15 +1089,29 @@ graph TD
 
 ```mermaid
 graph TD
-    subgraph SQL Database
-        UT[Users Table\nid, name, email]
-        OT[Orders Table\nid, user_id, total]
-        UT -- "JOIN on user_id" --> OT
-    end
 
-    subgraph NoSQL Document Store
-        UD[User Document\n{ id, name, email,\n  orders: [...] }]
-    end
+subgraph SQL_Database_Relational_Model
+    UT[Users Table id name email]
+    OT[Orders Table id user_id total_amount]
+
+    UT -- JOIN using user_id --> OT
+
+    SQL_NOTE[Fixed schema normalized tables strong relationships ACID transactions]
+    UT --> SQL_NOTE
+    OT --> SQL_NOTE
+end
+
+subgraph NoSQL_Document_Model
+    UD[User Document id name email orders array]
+
+    NOSQL_NOTE[Flexible schema nested documents high scalability eventual consistency]
+    UD --> NOSQL_NOTE
+end
+
+COMPARE[SQL: structured relational data NoSQL: flexible document based data model]
+
+SQL_NOTE --> COMPARE
+NOSQL_NOTE --> COMPARE
 ```
 
 ### 5. Architecture Flow
