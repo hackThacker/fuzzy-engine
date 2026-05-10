@@ -4,7 +4,7 @@
 
 ### From Zero to Scalable — A Complete Open-Source Learning Resource
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/hackthacker/fuzzy-engine?style=social)](https://github.com/hackthacker/fuzzy-engine)
 [![GitHub Forks](https://img.shields.io/github/forks/hackthacker/fuzzy-engine?style=social)](https://github.com/hackthacker/fuzzy-engine/fork)
 [![Open Issues](https://img.shields.io/github/issues/hackthacker/fuzzy-engine)](https://github.com/hackthacker/fuzzy-engine/issues)
